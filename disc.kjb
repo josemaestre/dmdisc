@@ -83,7 +83,7 @@
   <connection>
     <name>dm</name>
     <server>${DM_HOST}</server>
-    <type>MARIADB</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>dm</database>
     <port>3306</port>
@@ -94,28 +94,12 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
         <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
-        <attribute>false</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
-        <attribute>convertToNull</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -140,6 +124,10 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
@@ -158,7 +146,7 @@
   <connection>
     <name>dm_stegin</name>
     <server>${DM_HOST}</server>
-    <type>MARIADB</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>dm_stg</database>
     <port>3306</port>
@@ -169,28 +157,12 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
         <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
-        <attribute>false</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
-        <attribute>convertToNull</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -215,6 +187,10 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
@@ -233,7 +209,7 @@
   <connection>
     <name>ds_evaluacenter</name>
     <server>${SC_HOST}</server>
-    <type>MARIADB</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>epp3</database>
     <port>3306</port>
@@ -244,11 +220,11 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
@@ -274,6 +250,10 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
@@ -927,7 +907,7 @@ SET FOREIGN_KEY_CHECKS = 1; </sql>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>48</xloc>
-      <yloc>16</yloc>
+      <yloc>32</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1166,8 +1146,8 @@ SET FOREIGN_KEY_CHECKS = 1; </sql>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>480</xloc>
-      <yloc>64</yloc>
+      <xloc>528</xloc>
+      <yloc>32</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1334,8 +1314,8 @@ SC_HOST=${SC_HOST}</comment>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>288</xloc>
-      <yloc>64</yloc>
+      <xloc>352</xloc>
+      <yloc>32</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1443,8 +1423,8 @@ SC_HOST=${SC_HOST}</logmessage>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>160</xloc>
-      <yloc>64</yloc>
+      <xloc>224</xloc>
+      <yloc>32</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -1769,7 +1749,7 @@ SC_HOST=${SC_HOST}</logmessage>
       <to>Check DB</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
@@ -1805,7 +1785,7 @@ SC_HOST=${SC_HOST}</logmessage>
       <to>Procesados a stegin</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
