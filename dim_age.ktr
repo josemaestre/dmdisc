@@ -441,7 +441,7 @@
     <type>MARIADB</type>
     <access>Native</access>
     <database>dm</database>
-    <port>${DM_HOST_PORT}</port>
+    <port>3306</port>
     <username>${USERDB}</username>
     <password>${PASSDB}</password>
     <servername/>
@@ -449,7 +449,15 @@
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
@@ -478,7 +486,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>${DM_HOST_PORT}</attribute>
+        <attribute>3306</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -531,6 +539,7 @@
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
+        <field_null_if/>
       </field>
       <field>
         <name>min</name>
@@ -542,6 +551,7 @@
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
+        <field_null_if/>
       </field>
       <field>
         <name>max</name>
@@ -553,6 +563,7 @@
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
+        <field_null_if/>
       </field>
       <field>
         <name>order</name>
@@ -564,6 +575,7 @@
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
+        <field_null_if/>
       </field>
     </fields>
     <data>
@@ -685,8 +697,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>264</xloc>
-      <yloc>36</yloc>
+      <xloc>272</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
