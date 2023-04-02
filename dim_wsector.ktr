@@ -439,7 +439,7 @@
   <connection>
     <name>dm</name>
     <server>${DM_HOST}</server>
-    <type>MYSQL</type>
+    <type>MARIADB</type>
     <access>Native</access>
     <database>dm</database>
     <port>3306</port>
@@ -450,11 +450,11 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
@@ -480,10 +480,6 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>STREAM_RESULTS</code>
-        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
@@ -501,8 +497,8 @@
   </connection>
   <connection>
     <name>ds_evaluacenter</name>
-    <server>${SC_HOST}</server>
-    <type>MYSQL</type>
+    <server>db</server>
+    <type>MARIADB</type>
     <access>Native</access>
     <database>epp3</database>
     <port>3306</port>
@@ -513,11 +509,11 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
@@ -543,10 +539,6 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>STREAM_RESULTS</code>
-        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
@@ -792,7 +784,7 @@ FROM work_sector
       </output>
     </remotesteps>
     <GUI>
-      <xloc>84</xloc>
+      <xloc>64</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>

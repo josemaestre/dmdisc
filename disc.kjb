@@ -196,7 +196,7 @@
   </connection>
   <connection>
     <name>ds_evaluacenter</name>
-    <server>${SC_HOST}</server>
+    <server>db</server>
     <type>MARIADB</type>
     <access>Native</access>
     <database>epp3</database>
@@ -1117,8 +1117,8 @@ SET FOREIGN_KEY_CHECKS = 1; </sql>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>224</xloc>
-      <yloc>176</yloc>
+      <xloc>240</xloc>
+      <yloc>160</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
