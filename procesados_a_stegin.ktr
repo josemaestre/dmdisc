@@ -575,10 +575,10 @@
   </connection>
   <connection>
     <name>ds_evaluacenter</name>
-    <server>${SC_HOST}</server>
-    <type>MARIADB</type>
+    <server>${DM_HOST}</server>
+    <type>MYSQL</type>
     <access>Native</access>
-    <database>${SC_HOST_DB_NAME}</database>
+    <database>evaluacenter</database>
     <port>3306</port>
     <username>${USERDB}</username>
     <password>${PASSDB}</password>
@@ -587,20 +587,12 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
         <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
-        <attribute>false</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
-        <attribute>convertToNull</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -625,6 +617,10 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>

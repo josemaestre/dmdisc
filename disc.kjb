@@ -155,144 +155,6 @@
       </attribute>
     </attributes>
   </connection>
-  <connection>
-    <name>dm_stegin</name>
-    <server>${DM_HOST}</server>
-    <type>MARIADB</type>
-    <access>Native</access>
-    <database>dm_stg</database>
-    <port>3306</port>
-    <username>${USERDB}</username>
-    <password>${PASSDB}</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
-        <attribute>500</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCompression </code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
-        <attribute>false</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
-        <attribute>convertToNull</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>ds_evaluacenter</name>
-    <server>${DM_HOST}</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>evaluacenter</database>
-    <port>3306</port>
-    <username>${USERDB}</username>
-    <password>${PASSDB}</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute>
-        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
-        <attribute>500</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>STREAM_RESULTS</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
-    </attributes>
-  </connection>
   <slaveservers>
     </slaveservers>
   <job-log-table>
@@ -1138,27 +1000,12 @@ SET FOREIGN_KEY_CHECKS = 1; </sql>
           <waitfor>5</waitfor>
           <waittime>millisecond</waittime>
         </connection>
-        <connection>
-          <name>dm</name>
-          <waitfor>5</waitfor>
-          <waittime>millisecond</waittime>
-        </connection>
-        <connection>
-          <name>dm_stegin</name>
-          <waitfor>5</waitfor>
-          <waittime>millisecond</waittime>
-        </connection>
-        <connection>
-          <name>ds_evaluacenter</name>
-          <waitfor>5</waitfor>
-          <waittime>millisecond</waittime>
-        </connection>
       </connections>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>48</xloc>
-      <yloc>144</yloc>
+      <xloc>208</xloc>
+      <yloc>160</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1512,7 +1359,7 @@ SC_HOST=${SC_HOST}</logmessage>
       <to>Dim Sector</to>
       <from_nr>0</from_nr>
       <to_nr>2</to_nr>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -1701,7 +1548,7 @@ SC_HOST=${SC_HOST}</logmessage>
       <to>Procesados a stegin</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
@@ -1773,7 +1620,7 @@ SC_HOST=${SC_HOST}</logmessage>
       <to>Check DB</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
@@ -1803,6 +1650,15 @@ SC_HOST=${SC_HOST}</logmessage>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>Procesados a stegin</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>
