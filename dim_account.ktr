@@ -521,7 +521,7 @@
     <server>localhost</server>
     <type>MARIADB</type>
     <access>Native</access>
-    <database>evaluacenter</database>
+    <database>${SC_HOST_DB_NAME}</database>
     <port>3306</port>
     <username>dm</username>
     <password>Encrypted 2be98afc86aa7f2e4cb79ff21da9ffe8b</password>
