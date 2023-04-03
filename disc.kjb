@@ -35,6 +35,10 @@
         <attribute>500</attribute>
       </attribute>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.passwordCharacterEncoding</code>
+        <attribute>UTF-8</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
@@ -94,6 +98,10 @@
         <attribute>500</attribute>
       </attribute>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.passwordCharacterEncoding</code>
+        <attribute>UTF-8</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
@@ -151,6 +159,10 @@
       <attribute>
         <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.passwordCharacterEncoding</code>
+        <attribute>UTF-8</attribute>
       </attribute>
       <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
