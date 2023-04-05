@@ -455,28 +455,24 @@
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.allowPublicKeyRetrieval</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCompression </code>
-        <attribute>true</attribute>
+        <code>EXTRA_OPTION_MARIADB.passwordCharacterEncoding</code>
+        <attribute>UTF-8</attribute>
       </attribute>
       <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
+        <code>EXTRA_OPTION_MARIADB.useSSL</code>
         <attribute>false</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
-        <attribute>convertToNull</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -518,24 +514,32 @@
   </connection>
   <connection>
     <name>ds_evaluacenter</name>
-    <server>localhost</server>
-    <type>MARIADB</type>
+    <server>${SC_HOST}</server>
+    <type>MYSQL</type>
     <access>Native</access>
-    <database>${SC_HOST_DB_NAME}</database>
+    <database>epp3</database>
     <port>3306</port>
-    <username>dm</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ff21da9ffe8b</password>
+    <username>${USERDB}</username>
+    <password>${PASSDB}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
         <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useSSL</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.verifyServerCertificate</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -560,6 +564,10 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
@@ -681,8 +689,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>84</yloc>
+      <xloc>224</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -742,8 +750,8 @@ FROM account
       </output>
     </remotesteps>
     <GUI>
-      <xloc>84</xloc>
-      <yloc>84</yloc>
+      <xloc>64</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -763,7 +771,7 @@ FROM account
     <table>dim_account</table>
     <commit>1000</commit>
     <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
+    <ignore_errors>Y</ignore_errors>
     <use_batch>N</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
