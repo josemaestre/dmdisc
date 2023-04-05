@@ -455,24 +455,28 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.allowPublicKeyRetrieval</code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
         <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.passwordCharacterEncoding</code>
-        <attribute>UTF-8</attribute>
+        <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <attribute>true</attribute>
       </attribute>
       <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useSSL</code>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
         <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
+        <attribute>convertToNull</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>

@@ -519,9 +519,9 @@
   <connection>
     <name>ds_evaluacenter</name>
     <server>${SC_HOST}</server>
-    <type>MARIADB</type>
+    <type>MYSQL</type>
     <access>Native</access>
-    <database>evaluacenter</database>
+    <database>epp3</database>
     <port>3306</port>
     <username>${USERDB}</username>
     <password>${PASSDB}</password>
@@ -530,28 +530,20 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
+        <code>EXTRA_OPTION_MYSQL.useSSL</code>
         <attribute>false</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
-        <attribute>convertToNull</attribute>
+        <code>EXTRA_OPTION_MYSQL.verifyServerCertificate</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -576,6 +568,10 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
@@ -938,7 +934,7 @@ FROM work_activity
     <table>dim_wactivity</table>
     <commit>1000</commit>
     <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
+    <ignore_errors>Y</ignore_errors>
     <use_batch>N</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
