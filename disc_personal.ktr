@@ -2622,7 +2622,7 @@ if (gender == "m") {
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1232</xloc>
+      <xloc>1328</xloc>
       <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
