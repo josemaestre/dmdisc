@@ -1186,8 +1186,8 @@ SET FOREIGN_KEY_CHECKS = 1; </sql>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>528</xloc>
-      <yloc>32</yloc>
+      <xloc>336</xloc>
+      <yloc>144</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1354,7 +1354,7 @@ SC_HOST=${SC_HOST}</comment>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>352</xloc>
+      <xloc>272</xloc>
       <yloc>32</yloc>
       <attributes_kjc/>
     </entry>
@@ -1463,8 +1463,8 @@ SC_HOST=${SC_HOST}</logmessage>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>224</xloc>
-      <yloc>32</yloc>
+      <xloc>192</xloc>
+      <yloc>144</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
