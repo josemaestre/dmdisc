@@ -1807,7 +1807,7 @@ SC_HOST=${SC_HOST}</logmessage>
       <to>Error de conexion - Mail</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
