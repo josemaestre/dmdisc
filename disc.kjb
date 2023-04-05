@@ -243,7 +243,7 @@
     <server>${SC_HOST}</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SC_HOST_DB_NAME}</database>
+    <database>epp3</database>
     <port>3306</port>
     <username>${USERDB}</username>
     <password>${PASSDB}</password>
@@ -258,6 +258,14 @@
       <attribute>
         <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
         <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useSSL</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.verifyServerCertificate</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -1178,7 +1186,7 @@ SET FOREIGN_KEY_CHECKS = 1; </sql>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>336</xloc>
+      <xloc>320</xloc>
       <yloc>144</yloc>
       <attributes_kjc/>
     </entry>
