@@ -438,36 +438,36 @@
   </notepads>
   <connection>
     <name>disc</name>
-    <server>localhost</server>
+    <server>${DM_HOST}</server>
     <type>MARIADB</type>
     <access>Native</access>
     <database>disc</database>
     <port>3306</port>
-    <username>root</username>
-    <password>Encrypted </password>
+    <username>${USERDB}</username>
+    <password>${PASSDB}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <code>EXTRA_OPTION_MARIADB.allowPublicKeyRetrieval</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
+        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.passwordCharacterEncoding</code>
+        <attribute>UTF-8</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
+        <code>EXTRA_OPTION_MARIADB.useSSL</code>
         <attribute>false</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.wait_timeout</code>
-        <attribute>57600</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
-        <attribute>convertToNull</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -509,19 +509,27 @@
   </connection>
   <connection>
     <name>dm</name>
-    <server>localhost</server>
+    <server>${DM_HOST}</server>
     <type>MARIADB</type>
     <access>Native</access>
     <database>dm</database>
     <port>3306</port>
-    <username>root</username>
-    <password>Encrypted </password>
+    <username>${USERDB}</username>
+    <password>${PASSDB}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
@@ -580,7 +588,7 @@
     <type>MARIADB</type>
     <access>Native</access>
     <database>dm_stg</database>
-    <port>${DM_HOST_PORT}</port>
+    <port>3306</port>
     <username>${USERDB}</username>
     <password>${PASSDB}</password>
     <servername/>
@@ -588,24 +596,32 @@
     <index_tablespace/>
     <attributes>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <code>EXTRA_OPTION_MARIADB.allowPublicKeyRetrieval</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useCursorFetch </code>
-        <attribute>true</attribute>
+        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <attribute>500</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.useServerPrepStmts</code>
+        <code>EXTRA_OPTION_MARIADB.passwordCharacterEncoding</code>
+        <attribute>UTF-8</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.serverRsaPublicKeyFile </code>
         <attribute>false</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.wait_timeout</code>
-        <attribute>57600</attribute>
+        <code>EXTRA_OPTION_MARIADB.trustServerCertificate</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
-        <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
-        <attribute>convertToNull</attribute>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useSSL</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -621,7 +637,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>${DM_HOST_PORT}</attribute>
+        <attribute>3306</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -659,7 +675,15 @@
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.useCompression </code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
       </attribute>
       <attribute>
@@ -669,10 +693,6 @@
       <attribute>
         <code>EXTRA_OPTION_MARIADB.useServerPrepStmts </code>
         <attribute>false</attribute>
-      </attribute>
-      <attribute>
-        <code>EXTRA_OPTION_MARIADB.wait_timeout</code>
-        <attribute>57600</attribute>
       </attribute>
       <attribute>
         <code>EXTRA_OPTION_MARIADB.zeroDateTimeBehavior</code>
@@ -2101,6 +2121,8 @@ FROM valores
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
