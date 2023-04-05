@@ -1195,7 +1195,7 @@ SET FOREIGN_KEY_CHECKS = 1; </sql>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>320</xloc>
-      <yloc>144</yloc>
+      <yloc>128</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
