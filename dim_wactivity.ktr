@@ -713,8 +713,8 @@ FROM evaluationdisc_sector
       </output>
     </remotesteps>
     <GUI>
-      <xloc>588</xloc>
-      <yloc>24</yloc>
+      <xloc>592</xloc>
+      <yloc>16</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

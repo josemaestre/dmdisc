@@ -2055,7 +2055,7 @@ SQL = SQL + sqlString;</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1280</xloc>
+      <xloc>1344</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2236,7 +2236,7 @@ SQL = SQL + sqlString;</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1280</xloc>
+      <xloc>1344</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>

@@ -1989,7 +1989,7 @@ if (len_cc >2)
     </remotesteps>
     <GUI>
       <xloc>928</xloc>
-      <yloc>80</yloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
