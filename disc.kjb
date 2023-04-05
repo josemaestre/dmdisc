@@ -31,6 +31,10 @@
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.allowPublicKeyRetrieval</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
@@ -41,6 +45,10 @@
       <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useSSL</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -94,6 +102,10 @@
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.allowPublicKeyRetrieval</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
@@ -104,6 +116,10 @@
       <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useSSL</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -157,6 +173,10 @@
     <index_tablespace/>
     <attributes>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.allowPublicKeyRetrieval</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
       </attribute>
@@ -165,8 +185,20 @@
         <attribute>UTF-8</attribute>
       </attribute>
       <attribute>
+        <code>EXTRA_OPTION_MARIADB.serverRsaPublicKeyFile </code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.trustServerCertificate</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useSSL</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -208,10 +240,10 @@
   </connection>
   <connection>
     <name>ds_evaluacenter</name>
-    <server>db</server>
+    <server>${SC_HOST}</server>
     <type>MARIADB</type>
     <access>Native</access>
-    <database>epp3</database>
+    <database>${SC_HOST_DB_NAME}</database>
     <port>3306</port>
     <username>${USERDB}</username>
     <password>${PASSDB}</password>
@@ -219,6 +251,10 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.allowPublicKeyRetrieval</code>
+        <attribute>true</attribute>
+      </attribute>
       <attribute>
         <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
         <attribute>500</attribute>
@@ -230,6 +266,10 @@
       <attribute>
         <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
         <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useSSL</code>
+        <attribute>false</attribute>
       </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
@@ -1133,8 +1173,8 @@ SET FOREIGN_KEY_CHECKS = 1; </sql>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>240</xloc>
-      <yloc>160</yloc>
+      <xloc>48</xloc>
+      <yloc>144</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1779,15 +1819,6 @@ SC_HOST=${SC_HOST}</logmessage>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Start</from>
-      <to>Procesados a stegin</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>N</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>
