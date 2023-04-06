@@ -2552,7 +2552,7 @@ AND d > 0</sql>
     </remotesteps>
     <GUI>
       <xloc>112</xloc>
-      <yloc>32</yloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
