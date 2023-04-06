@@ -1075,7 +1075,7 @@ for(var i=0,len=arreglo .length;i&lt;len;i++){
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to/>
+    <send_true_to>Sort rows</send_true_to>
     <send_false_to/>
     <compare>
       <condition>
@@ -1662,6 +1662,7 @@ for(var i=0,len=arreglo .length;i&lt;len;i++){
 FROM question_instance t0 
 WHERE t0.evaluation_id = ${id}
 AND t0.type IN ('questionInstance', 'disc', 'disccomercial', 'discprofesional', 'radarrevaluation', 'discpersonal', 'valores', 'vocacional', 'discjovenes', 'radar', 'discperfilpuesto', 'wellness')
+
 </sql>
     <limit>0</limit>
     <lookup/>
